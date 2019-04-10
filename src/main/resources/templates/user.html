@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="ISO-8859-1"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+	<style type="text/css">
+		
+		.navbar{
+        margin-bottom:0;
+        border-radius:0;
+      }
+
+      body {
+        color: #3c3939;
+        background-color: #fff;
+      }
+
+      .profile-card{
+        width: 400px;
+        margin: auto;
+        background: #fff;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+      }
+
+      .image-container{
+        position: relative;
+      }
+
+      /*.info{
+        color: blue;
+        margin-right: 16px;
+      }*/
+
+      .main-container{
+        padding: 20px;
+      }
+		
+	</style>
+
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="#">Swiss Bank</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li> -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Account Settings
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Update Profile</a>
+          <a class="dropdown-item" href="#">Close Account</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Any Enquiry</a>
+        </div>
+      </li>
+      <!-- <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li> -->
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+     <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+    </ul>
+  </div>
+</nav>
+
+    <div class="jumbotron text-center">
+      <div class="container">
+        <h1>Welcome ${accholder}</h1>
+        <p>What you want to do today?</p>
+      </div>
+    </div>
+
+    <div class="profile-card">
+      <div class="image-container">
+        <img src="wolverine.jpg" style="width:100%"/>
+        <div class="title">
+          <h2 style="text-align: center;">Wolverine</h2>
+        </div>
+      </div>
+      <div class="main-container">
+        <p><i class="fa fa-user info"></i> {$firstname}</p>
+        <p><i class="fa fa-user info"></i> {$lastname}</p>
+        <p><i class="fa fa-calendar info"></i> {$dateOfBirth}</p>
+        <p><i class="fa fa-phone info"></i> {$phone}</p>
+        <p><i class="fa fa-home info"></i> {$address}</p>
+        <p><i class="fa fa-id-card info"></i> {$accountNumber}</p>
+        <p><i class="fa fa-briefcase info"></i> {$email}</p>
+        <hr/>
+        <p>Account Type</p>
+        <p>{$accType}</p>
+        <p>Balance</p>
+        <p>Rs.{$balance}</p>
+      </div>
+  </div>
+
+  <br/>
+
+  <br/>
+
+    <h1 class="text-center text-uppercase">Some recent transactions</h1>
+
+    <br/>
+
+    <div class="container">
+      <table class="table table-striped table-bordered table-hover table-condensed">
+        <tr>
+          <th>Sent to Account No.</th>
+          <th>Transaction Id</th>
+          <th>Time</th>
+          <th>Amount in Rs</th>
+        </tr>
+        <tr>
+          <td>{$accountNumber}</td>
+          <td>{$transId}</td>
+          <td>{$timeStamp}</td>
+          <td>{$amount}</td>
+        </tr>
+        <tr>
+          <td>{$accountNumber}</td>
+          <td>{$transId}</td>
+          <td>{$timeStamp}</td>
+          <td>{$amount}</td>
+        </tr>
+        <tr>
+          <td>{$accountNumber}</td>
+          <td>{$transId}</td>
+          <td>{$timeStamp}</td>
+          <td>{$amount}</td>
+        </tr>
+        <tr>
+          <td>{$accountNumber}</td>
+          <td>{$transId}</td>
+          <td>{$timeStamp}</td>
+          <td>{$amount}</td>
+        </tr>
+        <tr>
+          <td>{$accountNumber}</td>
+          <td>{$transId}</td>
+          <td>{$timeStamp}</td>
+          <td>{$amount}</td>
+        </tr>
+      </table>
+    </div>
+</body>
+</html>

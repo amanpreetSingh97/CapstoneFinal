@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Admin Dashboard</title>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <style>
+   body { background-color: Khaki; }
+   p.container{color: red
+   background: green;}
+
+   .custom-select {
+   font-family: Arial;
+   color:#337ab7\;
+
+   }
+
+   .button {
+   background-color: #555555; /* Green */
+   border: none;
+   color: white;
+   padding: 15px 32px;
+   text-align: center;
+   text-decoration: none;
+   display: inline-block;
+   font-size: 16px;
+   margin: 4px 2px;
+   cursor: pointer;
+  
+}
+></style>
+</head>
+<body>
+
+<form th:action="@{/logout}" method="post" class="login-form">
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">NU Bank</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Admin Dashboard</a></li>
+    
+    </ul>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="logout"><span class="glyphicon glyphicon-user"></span> Sign Out</a></li>
+    
+      </ul>
+  </div>
+</nav>
+</form>
+  
+<div class="container">
+  <h3 class="text-center"><b>Admin Dashboard</b></h3>
+  <p class="text-center" style="color:#10344c;"><b>Welcome to Admin Dashboard </b></p>
+</div>
+
+<!-- <div class="container-fluid" style= "border: 2px solid black;"
+  "margin: auto;"
+  "padding: 20px;"
+  "text-align: center;"><h4><b>My Functionalities</b></h4>
+<br/> -->
+   
+
+<br/>
+<button class="button">Manage Employee Rights</button>
+<button class="button">User Profile Management</button>
+<button class="button">Partial User Data Access</button>
+  <br/>
+<br/> 
+</body>
+</html>
+
